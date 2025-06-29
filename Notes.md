@@ -1,11 +1,13 @@
 # Install TS Globally:
-    `tsc --init`
+    ```bash
+    tsc --init
 
 # After Running TS code:
     ## When we run TS code it compiler to JS code, even when there is error but gives the warning in the console.
 # Additional Thing:
     ## If we don't want to compiler the code manually again and again then we can use this:
-        `tsc --watch`
+        ```bash
+        tsc --watch
     ## this will automatically compile the code into JS
 # Data Types in TS:
     ## 1. Primitive and 2. Reference
@@ -28,10 +30,11 @@
 
 # Enumerations:
     ## It is key value pair, in this we proper of a key using =, and we can access the property using '.', syntax:
-    `enum userRoles{
+    ```bash
+    enum userRoles{
         ADMIN = 'admin',
         GUEST = 'guest',
-    }`
+    }
 
 # Any:
     ## When we just declare the variable without any value: `let a`, a doesn't have any type of value it can be any like: integer or string.
