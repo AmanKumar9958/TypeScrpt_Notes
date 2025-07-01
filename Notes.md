@@ -129,3 +129,14 @@
 
     }
     abcd("Aman")
+
+
+# Union:
+    ## When we have values from both like it can be either string or number.
+    ```bash
+    let a: string | number  // | -> This means union
+    a = "Hello"; ✔
+    a = 24; ✔
+    a = true; ❌
+
+# Intersection:
