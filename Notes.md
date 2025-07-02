@@ -19,7 +19,10 @@
     ## If we have these brackets (), {}, [], then all these belongs to reference data types.
 # Arrays:
     ## Basic syntax: `let arr = [1, 2, 3, 4, 5]`
-    ## Creating specific data type array, syntax: `let arr: number[] = [1, 2, 3, 4, 5]`, this will allow only number in the array
+    ## Creating specific data type array, syntax:
+    ```bash
+    let arr: number[] = [1, 2, 3, 4, 5]
+    ```
 
 # Tuples:
     ## Syntax: `let myTuple: [number, string] = [12, "Aman"]`, we can't change the order like: ["Aman", 12]
@@ -35,6 +38,7 @@
         ADMIN = 'admin',
         GUEST = 'guest',
     }
+    ```
 
 # Any:
     ## When we just declare the variable without any value: `let a`, a doesn't have any type of value it can be any like: integer or string. You can say that TS don't work with 'any'.
@@ -48,6 +52,7 @@
     if(typeof a == "string"){
         a.toUpperCase();
     }
+    ```
 
 # Void:
     ## When function is not returning anything using 'return' keyword then it is void function.
@@ -55,12 +60,14 @@
     function hello(): void{
         console.log("Hello Aman");
     }
+    ```
     ### This is a void function, because it is not returning anything.
 
     ```bash
     function vote(): boolean{
         return true;
     }
+    ```
     ### This is NOT a void function, because it is returning something.
 
 # Type Inference:
@@ -68,11 +75,13 @@
     ```bash
     let a: number;  // We have clearly defined the type of the variable
     let a = 12;     // TS will automatically understand that this is a number type variable
+    ```
 
 # Type Annotation:
     ## Defining the type of the variable in the starting.
     ```bash
     let a: number;
+    ```
 
 # Interface:
     ## Interface is used to defining the structure of our object.
@@ -80,6 +89,7 @@
     function name(user: 'string'){
         console.log(user);
     }
+    ```
     ## but if we do this:
     ```bash
     interface User{
@@ -92,6 +102,7 @@
 
     }
     getUserInfo({name: "Aman", email: "aman@gmail.com", password: "asdfghjkl"})     // we can enter gender here..
+    ```
 
     ## Extending Interface:
     ```bash
@@ -106,21 +117,25 @@
     function profile(obj: Admin){
         obj.isAdmin = true;
     }
+    ```
 
 # Type Aliases:
     ## Type aliases means creating our own type.
     ```bash
     let a: number;
+    ```
 
     ## But we want our own type:
     ```bash
     type sankhya = number;
     let a: sankhya;     // our own type
+    ```
 
     ## Another example:
     ```bash
     type value = string | number | null;
     let b: value    // our own type
+    ```
 
     ## Another example:
     ```bash
@@ -129,14 +144,51 @@
 
     }
     abcd("Aman")
-
+    ```
 
 # Union:
-    ## When we have values from both like it can be either string or number.
+    ## When we have values from both like it can be either string or number, represented by |.
     ```bash
     let a: string | number  // | -> This means union
     a = "Hello"; ✔
     a = 24; ✔
     a = true; ❌
+    ```
 
 # Intersection:
+    ## When we have to satisfy the both condition, represented by &.
+
+# Classes & Objects
+    ## Classes are blueprint for creating objects.
+    ## creating class
+    ```bash
+    class laptop{
+        model = 'M1 Air';
+        price = 58000;
+    }
+    ```
+    ## creating objects
+    ```bash
+    let l1 = new laptop();
+    let l2 = new laptop();
+    ```
+
+# Constructor
+    ## Constructor is called when the object is created.
+    ```bash
+    class Laptop{
+        constructor(public name: string, public price: number, public year: number = 2025) {
+            this.name = name;
+            this.price = price;
+        }
+    }
+    let l1 = new Laptop("M1 Air", 58000);
+    let l2 = new Laptop("M1 Pro", 120000);
+    l1.year = 2020;
+    console.log(l1);
+    ```
+
+# Access Modifiers:
+    ## 1. Private: Within the class only.
+    ## 2. Protected: In the derived class only.
+    ## 3. Public: Accessible everywhere.
