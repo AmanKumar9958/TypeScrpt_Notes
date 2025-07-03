@@ -240,7 +240,7 @@
 
 # Static:
 ## When we create any variable/methods using statics keyword then we don't need to create the objects we can directory call the using the class
-    ```bash
+    ```
     class use{
         static userCount: number = 0;
 
@@ -257,5 +257,4 @@
     console.log(User.getUserCount()); // 2
     let u3 = new User("Priya", 25);
     console.log(User.getUserCount()); // 3
-    ```
 
