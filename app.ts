@@ -125,20 +125,55 @@
 // console.log(u1); // Name changed to Rahul
 
 // Static keyword Example
-class User{
-    static userCount: number = 0;
+// class User{
+//     static userCount: number = 0;
 
-    constructor(public name: string, public age: number) {
-        User.userCount++;
-    }
+//     constructor(public name: string, public age: number) {
+//         User.userCount++;
+//     }
 
-    static getUserCount(): number {
-        return User.userCount;
-    }
+//     static getUserCount(): number {
+//         return User.userCount;
+//     }
+// }
+
+// let u1 = new User("Aman", 20);
+// let u2 = new User("Rahul", 22);
+// console.log(User.getUserCount()); // 2
+// let u3 = new User("Priya", 25);
+// console.log(User.getUserCount()); // 3
+
+
+// Functions
+
+function add(a: number, b: number): number{
+    return a + b;
 }
+// console.log(add(5, 10));
 
-let u1 = new User("Aman", 20);
-let u2 = new User("Rahul", 22);
-console.log(User.getUserCount()); // 2
-let u3 = new User("Priya", 25);
-console.log(User.getUserCount()); // 3
+function fun(name: string, age: number, cbfun: (arg: string) => void){
+    cbfun("Callback function");
+    console.log(`Name: ${name}, Age: ${age}`);
+}
+// fun("Aman", 20, (arg: string) => {
+//     console.log('Arg: ' + arg);
+// })
+
+
+// optional parameter
+function abcd(name: string, age: number, gender?: string){
+    console.log(`Name: ${name}`);
+    console.log(`Age: ${age}`);
+    console.log(`Gender ${gender !== undefined ? gender: "Not provided"}`);
+}
+// abcd("Aman", 20); // error 
+// abcd("Aman", 20, "Male")
+
+
+// Default parameter
+function info(name: string, age: number, work: string = "Web Developer"){
+    console.log(`Name: ${name}`);
+    console.log(`Age: ${age}`);
+    console.log(`Work: ${work}`);
+}
+// info("Aman", 20); // Work will be "Web Developer"

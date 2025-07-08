@@ -99,19 +99,36 @@
 // u1.name = "Rahul"; // Valid
 // console.log(u1); // Name changed to Rahul
 // Static keyword Example
-class User {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-        User.userCount++;
-    }
-    static getUserCount() {
-        return User.userCount;
-    }
+// class User{
+//     static userCount: number = 0;
+//     constructor(public name: string, public age: number) {
+//         User.userCount++;
+//     }
+//     static getUserCount(): number {
+//         return User.userCount;
+//     }
+// }
+// let u1 = new User("Aman", 20);
+// let u2 = new User("Rahul", 22);
+// console.log(User.getUserCount()); // 2
+// let u3 = new User("Priya", 25);
+// console.log(User.getUserCount()); // 3
+// Functions
+function add(a, b) {
+    return a + b;
 }
-User.userCount = 0;
-let u1 = new User("Aman", 20);
-let u2 = new User("Rahul", 22);
-console.log(User.getUserCount()); // 2
-let u3 = new User("Priya", 25);
-console.log(User.getUserCount()); // 3
+// console.log(add(5, 10));
+function fun(name, age, cbfun) {
+    cbfun("Callback function");
+    console.log(`Name: ${name}, Age: ${age}`);
+}
+// fun("Aman", 20, (arg: string) => {
+//     console.log('Arg: ' + arg);
+// })
+function abcd(name, age, gender) {
+    console.log(`Name: ${name}`);
+    console.log(`Age: ${age}`);
+    console.log(`Gender ${gender !== undefined ? gender : "Not provided"}`);
+}
+abcd("Aman", 20); // error 
+// abcd("Aman", 20, "Male")
