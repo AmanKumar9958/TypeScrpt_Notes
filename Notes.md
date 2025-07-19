@@ -294,3 +294,31 @@ function info(name: string, age: number, work: string = "Web Developer"){
 }
 ```
 
+### Rest Parameter:
+```bash
+function collect(...args: string[]){
+    console.log(args);
+}
+collect("Aman", "Rahul", "Priya");
+```
+
+### Spread Parameter:
+```bash
+function display(...args: string[]){
+    console.log(args);
+}
+let arr = ["Aman", "Rahul", "Priya"];
+display(...arr);
+```
+
+# Generics:
+```bash
+function genericFunction<T>(arg: T){
+    console.log(arg);
+}
+genericFunction<string>("Hello, Generics!");
+genericFunction("Hello Aman");
+```
+
+
+

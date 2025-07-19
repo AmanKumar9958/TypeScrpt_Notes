@@ -125,10 +125,51 @@ function fun(name, age, cbfun) {
 // fun("Aman", 20, (arg: string) => {
 //     console.log('Arg: ' + arg);
 // })
+// optional parameter
 function abcd(name, age, gender) {
     console.log(`Name: ${name}`);
     console.log(`Age: ${age}`);
     console.log(`Gender ${gender !== undefined ? gender : "Not provided"}`);
 }
-abcd("Aman", 20); // error 
+// abcd("Aman", 20); // error 
 // abcd("Aman", 20, "Male")
+// Default parameter
+function info(name, age, work = "Web Developer") {
+    console.log(`Name: ${name}`);
+    console.log(`Age: ${age}`);
+    console.log(`Work: ${work}`);
+}
+// info("Aman", 20); // Work will be "Web Developer"
+// Rest parameter
+// we have have so many parameters like abcd(10, 20, 30, 40, 50, 60, 70, 80, 90, 100), so for this we have to take that much arguments.
+function sum(...args) {
+    console.log(args);
+    let total = 0;
+    for (let i = 0; i < args.length; i++) {
+        total += args[i];
+    }
+    console.log(`Total: ${total}`);
+}
+// sum(10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+// Difference between rest and spread operator
+// Rest operator is used to collect all the arguments into an array, while spread operator is used to spread the elements of an array into individual elements.
+function display(...args) {
+    console.log(args);
+}
+let arr = ["Aman", "Rahul", "Priya"];
+// display(...arr); // Spread operator
+function collect(...args) {
+    console.log(args);
+}
+// collect("Aman", "Rahul", "Priya"); // Rest operator
+// Rest: "A", "B", "C" → ["A", "B", "C"]
+// Spread: ["A", "B", "C"] → "A", "B", "C"
+// Generic Functions Example
+function genericFunction(arg) {
+    console.log(arg);
+}
+// genericFunction<string>("Hello, Generics!");
+// genericFunction<number>(123);
+// Typescript automatically infers the type based on the argument passed
+// genericFunction("Hello Aman");
+// genericFunction(121);
