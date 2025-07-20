@@ -320,5 +320,20 @@ genericFunction<string>("Hello, Generics!");
 genericFunction("Hello Aman");
 ```
 
+# Type Assertions
+## Type assertion is a way to tell the TypeScript compiler that you know more about the type of a variable than it does. It can be done using the `as` keyword or angle brackets.
 
+```bash
+let someValue: any = "This is a string";
+let strLength: number = (someValue as string).length;
+```
+
+# Type Casting
+## Type casting is the process of converting a variable from one type to another. In TypeScript, we can use the `Number` function or `parseInt`/`parseFloat` functions for type casting.
+```bash
+let numValue: any = "12345";
+let num: number = Number(numValue);
+```
+
+# -----------------------------------------------------------------------X Completed X-------------------------------------------------------------------------
 

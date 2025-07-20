@@ -1,11 +1,13 @@
 "use strict";
 // classes & objects in JS
-// class Laptop{
-//     name = "M1 Air";
-//     price = 58000;
-// }
-// let l1 = new Laptop();
-// let l2 = new Laptop();
+class Laptop {
+    constructor() {
+        this.name = "M1 Air";
+        this.price = 58000;
+    }
+}
+let l1 = new Laptop();
+let l2 = new Laptop();
 // console.log(l1);
 // console.log(l2);
 // constructor example
@@ -173,3 +175,18 @@ function genericFunction(arg) {
 // Typescript automatically infers the type based on the argument passed
 // genericFunction("Hello Aman");
 // genericFunction(121);
+// Type assertion
+// Type assertion is a way to tell the TypeScript compiler that you know more about the type of a variable than it does. It can be done using the `as` keyword or angle brackets.
+let someValue = "This is a string";
+let strLength = someValue.length; // we have to tell the compiler that someValue is a string
+// console.log(strLength); // 16
+let anotherValue = 12345;
+// console.log(anotherValue.toString().length);
+// console.log(typeof anotherValue); // number
+// Type casting
+// Type casting is the process of converting a variable from one type to another. In TypeScript, we can use the `Number` function or `parseInt`/`parseFloat` functions for type casting.
+let numValue = "12345";
+let num = Number(numValue); // Type casting using Number function
+// console.log(typeof numValue); // string
+// console.log(typeof num); // number
+console.log("-----------------------------------------------------------------------X Completed X-------------------------------------------------------------------------");
